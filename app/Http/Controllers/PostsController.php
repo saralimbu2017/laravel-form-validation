@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
+use App\Models\Post;
+use Auth;
 class PostsController extends Controller
 {
     /**
@@ -37,7 +39,14 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         //
-        return $request->get('title');
+        //return $request->get('title');
+        Post::create([
+            'title'=>request('title')
+            
+        ]);
+        // $post = new Post;
+        // $post->title = $request->title;
+        // $post->save();
     }
 
     /**
