@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/posts',[PostsController::class,'index']);
+//Route::get('/posts',[PostsController::class,'index']);
 
-Route::get('/posts/create',[PostsController::class,'create']);
+
+/**Crud Application */
+
+//Route::resource('/posts/create',PostsController::class,['except'=>['create']]);
+Route::resource('/posts',PostsController::class);
