@@ -16,7 +16,9 @@ class PostsController extends Controller
     public function index()
     {
         //
-        return "Hello to Laravel.";
+        $posts = Post::all();
+        return view('posts.index',compact('posts'));
+        //return "Hello to Laravel.";
     }
 
     /**
