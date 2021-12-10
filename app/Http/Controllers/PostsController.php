@@ -44,6 +44,7 @@ class PostsController extends Controller
             'title'=>request('title')
             
         ]);
+        return redirect('/posts');
         // $post = new Post;
         // $post->title = $request->title;
         // $post->save();
