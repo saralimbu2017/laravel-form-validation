@@ -7,4 +7,4 @@
     <input type="submit" name="submit">
   </form>
 
-@yield('footer')
+@endsection
