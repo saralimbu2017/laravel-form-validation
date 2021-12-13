@@ -17,5 +17,10 @@
 
       {!! Form::submit('Update Post', ['class' => 'btn btn-primary']) !!}
     </div>
-  {!! Form::close() !!}
+      {!! Form::close() !!}
+
+
+      {!! Form::open(['method' => 'DELETE','route' => ['posts.destroy',$post->id]]) !!}
+      {!! Form::submit('DELETE Post', ['class' => 'btn btn-primary']) !!}
+      {!! Form::close() !!}
 @endsection
