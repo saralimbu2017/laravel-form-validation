@@ -42,14 +42,15 @@ class PostsController extends Controller
     {
         //
         //return $request->get('title');
-        Post::create([
-            'title'=>request('title')
+        // Post::create([
+        //     'title'=>request('title')
             
-        ]);
+        // ]);
+        
+        $post = new Post;
+        $post->title = $request->title;
+        $post->save();
         return redirect('/posts');
-        // $post = new Post;
-        // $post->title = $request->title;
-        // $post->save();
     }
 
     /**
