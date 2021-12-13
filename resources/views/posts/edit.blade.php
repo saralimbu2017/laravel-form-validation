@@ -3,16 +3,19 @@
 @section('content')
 
   <h1>Edit Post</h1>
-  <form method="post" action="/posts/{{$post->id}}">
-    {{csrf_field()}} 
-    <input type="hidden" name="_method" value="PUT">
-    <input type="text" name="title" placeholder="Enter title" value="{{$post->title}}">
-    <input type="submit" name="submit">
-  </form>
+  {!! Form::model($post,['method' => 'PATCH','route' => ['posts.update',$post->id]]) !!}
+    @csrf 
 
-  <form method="post" action="/posts/{{$post->id}}">
-    {{csrf_field()}} 
-    <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" name="DELETE" value = "DELETE">
-  </form>
+    <div class="form-group">
+
+      {!! Form::label('title', 'Title:') !!}
+      {!! Form::text('title', null, ['class' => 'form-control']) !!}
+    
+    </div>
+
+    <div class="form-group">
+
+      {!! Form::submit('Update Post', ['class' => 'btn btn-primary']) !!}
+    </div>
+  {!! Form::close() !!}
 @endsection
