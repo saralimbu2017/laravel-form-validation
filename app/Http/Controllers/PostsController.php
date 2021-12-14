@@ -42,7 +42,7 @@ class PostsController extends Controller
     {
         //validation rules
         $this->validate($request, [
-            'title' => 'required',
+            'title' => 'required|max:4',
             'content' => 'required'
         ]);
         //return $request->get('title');
