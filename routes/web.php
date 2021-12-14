@@ -24,3 +24,7 @@ Route::get('/', function () {
 
 //Route::resource('/posts/create',PostsController::class,['except'=>['create']]);
 Route::resource('/posts',PostsController::class);
+
+Route::group(['middleware' => 'web'], function(){
+    Route::resource('/posts', PostsController::class);
+});
