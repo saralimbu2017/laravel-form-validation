@@ -26,5 +26,12 @@ Route::get('/', function () {
 Route::resource('/posts',PostsController::class);
 
 Route::group(['middleware' => 'web'], function(){
+
     Route::resource('/posts', PostsController::class);
+
+    Route::get('/dates',function(){
+        $date = new DateTime('+1 week');
+        echo $date->format('m-d-Y');
+        echo '<br>';
+    });
 });
