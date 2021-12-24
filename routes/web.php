@@ -18,7 +18,7 @@ Route::get('/', function(){
     return view('welcome');
 });
 
-Route::get('/posts',[PostsController::class,'index']);
+//Route::get('/posts',[PostsController::class,'index']);
 
 
 /**Crud Application */
@@ -26,7 +26,7 @@ Route::get('/posts',[PostsController::class,'index']);
 //Route::resource('/posts/create',PostsController::class,['except'=>['create']]);
 //Route::resource('/posts',PostsController::class);
 
-// Route::group(['middleware' => 'web'], function(){
+Route::group(['middleware' => 'web'], function(){
 
-//     Route::resource('/posts', PostsController::class);
-// });
+    Route::resource('/posts', PostsController::class);
+});
