@@ -2,7 +2,8 @@
 
 @section('content')
   <h1>Create Post</h1>
-  <!-- <form method="post" action="/posts"> -->
+  
+  //Opening a Form
   {!! Form::open(['method' => 'POST','route' => 'posts.store']) !!}
     @csrf 
 
