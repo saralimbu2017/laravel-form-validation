@@ -12,13 +12,13 @@
 -->
 
 <div align="center">
-    <h1> THE File-Upload Form Application</h1>
+    <h1> Form-Validation</h1>
     <h5>ABOUT THE PROJECT</h2>
  </div>
  
  <div>
     <p text-align="justify">
-        File-Upload is a Laravel Form Application that helps to upload files.
+        File-Validation is a Laravel Application that helps to identify user credentials. It allows only authenticated users to get into application.
     </p>
 </div>
 
