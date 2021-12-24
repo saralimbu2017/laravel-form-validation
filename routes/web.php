@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
+use Carbon\Carbon;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,25 +14,19 @@ use App\Http\Controllers\PostsController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function(){
     return view('welcome');
 });
 
-//Route::get('/posts',[PostsController::class,'index']);
+Route::get('/posts',[PostsController::class,'index']);
 
 
 /**Crud Application */
 
 //Route::resource('/posts/create',PostsController::class,['except'=>['create']]);
-Route::resource('/posts',PostsController::class);
+//Route::resource('/posts',PostsController::class);
 
-Route::group(['middleware' => 'web'], function(){
+// Route::group(['middleware' => 'web'], function(){
 
-    Route::resource('/posts', PostsController::class);
-
-    Route::get('/dates',function(){
-        $date = new DateTime('+1 week');
-        echo $date->format('m-d-Y');
-        echo '<br>';
-    });
-});
+//     Route::resource('/posts', PostsController::class);
+// });
