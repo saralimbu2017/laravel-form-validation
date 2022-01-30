@@ -18,7 +18,7 @@
  
  <div>
     <p text-align="justify">
-        File-Validation is a Laravel Application that  build forms to enter data into the database. It validates user credentials and allows only authenticated users access the application.
+        File-Validation is a Laravel Application that  build forms to enter data into the database. It validates user credentials and allows only authenticated users to access the application.
     </p>
 </div>
 
